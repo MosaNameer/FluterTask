@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'loginScreen.dart';
-
-void main() {
+import 'package:flutterproject/screens/home_screen.dart';
+import 'package:flutterproject/screens/intro_screen.dart';
+import 'package:flutterproject/screens/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+  Future<void> main()    async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -10,9 +14,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
+     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      title: "Exersice",
+      theme: ThemeData(
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.black12,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black12 ),
+            borderRadius: BorderRadius.circular(20)
+          ),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.black12 ),
+              borderRadius: BorderRadius.circular(20)
+          ),
+          disabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.black12 ),
+              borderRadius: BorderRadius.circular(20)
+          ),
+        )
+      ),
+
+      routes: {
+        'home' : (context)=> home_screen(),
+        'login' : (context) =>login_screen(authType:AuthType.login ),
+        'register' : (context) =>login_screen(authType:AuthType.register,)
+      },
+      home: intro_screen(),
     );
   }
 }

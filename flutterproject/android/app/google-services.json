@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "706702473663",
+    "project_id": "exercies-app",
+    "storage_bucket": "exercies-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706702473663:android:2a82426368419fbcf2490a",
+        "android_client_info": {
+          "package_name": "com.example.flutterproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706702473663-lm453ah2smi3m602p7embsoqf8krcin2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvI132gMrMpOV_M5kFSxipa39JjvTTv_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706702473663-lm453ah2smi3m602p7embsoqf8krcin2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
