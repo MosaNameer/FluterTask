@@ -3,9 +3,9 @@ import 'package:flutterproject/screens/home_screen.dart';
 import 'package:flutterproject/screens/intro_screen.dart';
 import 'package:flutterproject/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-  Future<void> main()    async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+   main()    {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
