@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutterproject/screens/home_screen.dart';
 import 'package:flutterproject/screens/intro_screen.dart';
 import 'package:flutterproject/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-   main()    {
-  // WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+   main()    async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.indigo));
   runApp(const MyApp());
 }
 

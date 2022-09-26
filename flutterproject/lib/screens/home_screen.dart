@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/lists/cart_list.dart';
 import 'package:flutterproject/widgets/cart.dart';
 
 class home_screen extends StatelessWidget {
@@ -21,7 +22,6 @@ class home_screen extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.topLeft,
                       decoration:const BoxDecoration(
-
                       color: Colors.indigo,
                       ),
                       child: Column(
@@ -32,17 +32,14 @@ class home_screen extends StatelessWidget {
                             fontFamily: 'JosefinSans',
                               fontWeight: FontWeight.w700
 
-                          ),
-                        ),
+                          ),),
                           Text("            App",
                             style: TextStyle(fontSize: 40 , color: Colors.white,
                                 fontFamily: 'JosefinSans',
                               fontWeight: FontWeight.w600
 
-                            ),
-                          ),
-
-                        ],),
+                            ),)
+                        ],)
                     ),
                   ),
                   Container(
@@ -56,8 +53,9 @@ class home_screen extends StatelessWidget {
                     ),
                   ),
                         const Padding(
-                           padding: EdgeInsets.only(top: 150,left: 10),
-                          child:Text('Courses',
+                           padding: EdgeInsets.only(top: 155, left: 15
+                           ),
+                          child:Text('Popular trainers',
                             style: TextStyle(fontSize: 25 , color: Colors.black,
                               fontFamily: 'JosefinSans-Italic',
 
@@ -65,19 +63,18 @@ class home_screen extends StatelessWidget {
                           ),) ,
                            ),
                         
-                         Container(
-                                  margin: EdgeInsets.only(top: 200.0,),
-                                  // child:
-                                  // ListView.builder(
-                                  //   itemCount: 6,
-                                  //   itemBuilder:  (context, index) =>Column(
-                                  //     children: const [
-                                  child:   mycart(),
-                                  //   ],
-                                  // )
-                                ),
+                       Container(
+                             margin: EdgeInsets.only(top: 200.0,left: 20,right: 20),
+                             child:
+                             ListView.builder(
+                               itemCount: 3,
+                               itemBuilder:  (context, index) => mycart(
+                               key:  Key(''),
+                               cart: cart_lists[index],
+                               cart2: cart_list2[index],),
 
-                         // ),
+                           ),
+                       ),
 
                 ],),
             ),
