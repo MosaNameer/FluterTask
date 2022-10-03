@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterproject/lists/cart_list.dart';
+import 'package:flutterproject/screens/deatils/details_screen2.dart';
 import 'package:flutterproject/widgets/cart.dart';
 
 class home_screen extends StatelessWidget {
@@ -9,6 +10,17 @@ class home_screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
     //  backgroundColor: Colors.white,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.indigo,
+        elevation: 0,
+        centerTitle: true,
+        title: const Text(
+          " Fitness App ",
+                  style: TextStyle(fontSize: 35 , color: Colors.white,
+                    fontFamily: 'JosefinSans',
+                      fontWeight: FontWeight.w900),),
+      ),
       body: SafeArea(
        // bottom: false,
         child: Column(
@@ -16,34 +28,9 @@ class home_screen extends StatelessWidget {
             Expanded(
               child: Stack(
                 children: [
-                  SizedBox(
-                    height: 180,
-                    width: MediaQuery.of(context).size.width,
-                    child: Container(
-                      alignment: Alignment.topLeft,
-                      decoration:const BoxDecoration(
-                      color: Colors.indigo,
-                      ),
-                      child: Column(
-                        children:   const [
-                          Padding(padding: EdgeInsets.only(top: 18)),
-                          Text(" Fitness   ",
-                          style: TextStyle(fontSize: 50 , color: Colors.white,
-                            fontFamily: 'JosefinSans',
-                              fontWeight: FontWeight.w700
 
-                          ),),
-                          Text("            App",
-                            style: TextStyle(fontSize: 40 , color: Colors.white,
-                                fontFamily: 'JosefinSans',
-                              fontWeight: FontWeight.w600
-
-                            ),)
-                        ],)
-                    ),
-                  ),
                   Container(
-                    margin:const EdgeInsets.only(top: 140.0),
+                  //  margin:const EdgeInsets.only(top: 140.0),
                     decoration:const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
@@ -53,10 +40,12 @@ class home_screen extends StatelessWidget {
                     ),
                   ),
                         const Padding(
-                           padding: EdgeInsets.only(top: 155, left: 15
+                           padding: EdgeInsets.only(
+                               top: 25,
+                               left: 10
                            ),
                           child:Text('Popular trainers',
-                            style: TextStyle(fontSize: 25 , color: Colors.black,
+                            style: TextStyle(fontSize: 23 , color: Colors.black,
                               fontFamily: 'JosefinSans-Italic',
 
 
@@ -64,18 +53,19 @@ class home_screen extends StatelessWidget {
                            ),
                         
                        Container(
-                             margin: EdgeInsets.only(top: 200.0,left: 20,right: 20),
+                             margin: EdgeInsets.only(top: 60.0,left: 20,right: 20),
                              child:
                              ListView.builder(
                                itemCount: 3,
                                itemBuilder:  (context, index) => mycart(
                                key:  Key(''),
                                cart: cart_lists[index],
-                               cart2: cart_list2[index],),
+                               cart2: cart_list2[index],
 
-                           ),
+
+                               ),
                        ),
-
+                       ),
                 ],),
             ),
           ],),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterproject/navpar/pages.dart';
 import 'package:flutterproject/screens/home_screen.dart';
 import 'package:flutterproject/screens/login_screen.dart';
 import 'package:flutterproject/widgets/orginalbutton.dart';
@@ -24,7 +25,7 @@ class _intro_screenState extends State<intro_screen> {
               padding: EdgeInsets.only(left: 310,top: 10),
               child: InkWell(
                 onTap: () {
-                 Navigator.of(context).pushNamed('home');
+                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => pages(),));
                 },
                 child: const Text("Skip",
                 style: TextStyle(
