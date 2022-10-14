@@ -61,7 +61,7 @@ const Course_data = [
       categorise: ['c2'],
       time:  '14',
       price:  25,
-      Course_Name: ' ',
+      Course_Name: 'Course_Name2 ',
       img: 'https://i.pinimg.com/564x/6b/ab/5b/6bab5b64e070a62cc7d6b1484c1c911f.jpg'),
 
   course_cart(
